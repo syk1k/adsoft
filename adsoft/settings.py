@@ -25,7 +25,7 @@ SECRET_KEY = 'vq*%%n693%@g_wuy*sb8^g*eh_w&#7^1j@pksevlz=53e8!a_@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['adsoftblog-adsoft-blog.193b.starter-ca-central-1.openshiftapps.com']
+ALLOWED_HOSTS = ['adsoftblog-adsoft-blog.193b.starter-ca-central-1.openshiftapps.com/', 'localhost']
 
 
 # Application definition
@@ -54,7 +54,7 @@ ROOT_URLCONF = 'adsoft.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
